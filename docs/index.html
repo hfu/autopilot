@@ -11932,9 +11932,10 @@ let protocol = new pmtiles.Protocol();
 maplibregl.addProtocol("pmtiles", protocol.tile);
 
 const map = new maplibregl.Map({
-  container: 'map', hash: true, style: style);
-map.addControl(new maplibregl.NavigationControl())
-map.addControl(new maplibregl.GlobeControl())
+  container: 'map', hash: true, style: style
+});
+map.addControl(new maplibregl.NavigationControl());
+map.addControl(new maplibregl.GlobeControl());
 </script>
 </body>
 </html>
