@@ -1809,7 +1809,12 @@ const style = {
             ],
             "paint": {
                 "line-color": "#adadad",
-                "line-width": 0.7,
+                "line-width": [
+                    "case",
+                    ["get", "disputed"],
+                    0,
+                    0.7
+                ],
                 "line-dasharray": [
                     "step",
                     [
