@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
 <link href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
-<script src="https://unpkg.com/pmtiles@3.0.7/dist/pmtiles.js"></script>
 <style>
 body { margin: 0; background: #000; } 
 #map { width: 100vw; height: 100vh; }
@@ -20,7 +19,7 @@ const style = {
         "protomaps": {
             "type": "vector",
             "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
-            "url": "pmtiles://https://data.source.coop/protomaps/openstreetmap/v4.pmtiles"
+            "url": "https://tunnel.optgeo.org/martin/protomaps-basemap"
         }
     },
     "layers": [
@@ -11926,10 +11925,6 @@ const style = {
     "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
     "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf"
 }
-
-// Add PMTiles protocol
-let protocol = new pmtiles.Protocol();
-maplibregl.addProtocol("pmtiles", protocol.tile);
 
 const map = new maplibregl.Map({
   container: 'map', hash: true, style: style

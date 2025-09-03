@@ -1,6 +1,6 @@
 # Autopilot
 
-An interactive web map viewer built with MapLibre GL JS, featuring efficient tile delivery through PMTiles and high-quality basemap styling.
+An interactive web map viewer built with MapLibre GL JS, featuring efficient tile delivery and high-quality basemap styling.
 
 ## Overview
 
@@ -11,7 +11,7 @@ This project provides a clean, fast-loading interactive map interface that can s
 - **Interactive Map**: Pan, zoom, and explore with smooth animations
 - **Navigation Controls**: Built-in zoom and rotation controls
 - **Globe View**: 3D globe control for global perspective
-- **Efficient Tiles**: Uses PMTiles format for fast tile delivery
+- **Efficient Tiles**: Uses optimized vector tiles for fast tile delivery
 - **Comprehensive Styling**: Detailed basemap with multiple data layers:
   - Land cover and land use
   - Water bodies (rivers, lakes, oceans)
@@ -30,13 +30,12 @@ The map is available at: [GitHub Pages](https://hfu.github.io/autopilot/)
 ### Technologies Used
 
 - **[MapLibre GL JS](https://maplibre.org/)** - Open-source map rendering library
-- **[PMTiles](https://github.com/protomaps/PMTiles)** - Cloud-optimized map tile format
 - **[Protomaps](https://protomaps.com/)** - Open-source basemap data and styling
 
 ### Map Style
 
 The map uses a custom light theme style with:
-- Vector tiles served via PMTiles protocol
+- Vector tiles served via HTTP
 - Multi-language label support with fallbacks
 - Zoom-dependent styling for optimal readability
 - Comprehensive icon set for points of interest
@@ -94,7 +93,7 @@ python -m http.server 8000
 
 The map style is defined inline in `docs/index.html`. You can modify:
 - **Colors**: Update the paint properties for different layers
-- **Data Source**: Change the PMTiles URL to use different map data
+- **Data Source**: Change the tile source URL to use different map data
 - **Fonts**: Modify the font stack in the style definition
 - **Controls**: Add or remove map controls as needed
 
